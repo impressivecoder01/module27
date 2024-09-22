@@ -11,7 +11,7 @@ document.getElementById('button-login').addEventListener('click', function(event
     // console.log(phoneNumber, pinNumber);
     // step - 4 validate phone and pin
     // this is the not the ideal way
-    if(phoneNumber === '0175' && pinNumber === '1234'){
+    if(phoneNumber === '0175' && pinNumber === '12341'){
         console.log('right')
         window.location.href = './home.html';
         // step - 5 allow user to use the website
