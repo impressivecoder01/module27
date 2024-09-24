@@ -37,36 +37,48 @@
 
 
 
-document.getElementById('btn-add-money').addEventListener('click' , function(event){
-    event.preventDefault();
-    const addMoney = document.getElementById('input-add-money').value;
-    const pinNumber = document.getElementById('input-pin-number').value;
-    if(pinNumber === '1234'){
-        const balance = document.getElementById('account-balance').innerText;
-        const addMoneyNumber = parseFloat(addMoney);
-        const mainBalance = parseFloat(balance);
-        const newBalance = addMoneyNumber + mainBalance;
-        console.log(newBalance)
-        document.getElementById("account-balance").innerText = newBalance;
-    }
-    else{
-        alert('pin number is wrong')
-    }
-})
+// document.getElementById('btn-add-money').addEventListener('click' , function(event){
+//     event.preventDefault();
+//     const addMoney = document.getElementById('input-add-money').value;
+//     const pinNumber = document.getElementById('input-pin-number').value;
+//     if(pinNumber === '1234'){
+//         const balance = document.getElementById('account-balance').innerText;
+//         const addMoneyNumber = parseFloat(addMoney);
+//         const mainBalance = parseFloat(balance);
+//         const newBalance = addMoneyNumber + mainBalance;
+//         console.log(newBalance)
+//         document.getElementById("account-balance").innerText = newBalance;
+//     }
+//     else{
+//         alert('pin number is wrong')
+//     }
+// })
 
-document.getElementById('btn-cash-out').addEventListener('click', function(event){
+// document.getElementById('btn-cash-out').addEventListener('click', function(event){
+//     event.preventDefault();
+//     const cashOutMoney = document.getElementById('input-cash-out-money').value;
+//     const cashOutPin = document.getElementById('input-cash-out-pin').value;
+//     if(cashOutPin === '1234'){
+//         const cashOutNumber = parseFloat(cashOutMoney);
+//         const oldBalance = document.getElementById('out-account-balance').innerText
+//         const oldBalanceNumber = parseFloat(oldBalance);
+//         const minusBalance = oldBalanceNumber - cashOutNumber;
+//         // console.log(minusBalance);
+//         document.getElementById('out-account-balance').innerText = minusBalance;
+//     }
+//     else{
+//         alert('something is wrong')
+//     }
+// })
+
+document.getElementById('btn-add-money').addEventListener('click', function(event){
     event.preventDefault();
-    const cashOutMoney = document.getElementById('input-cash-out-money').value;
-    const cashOutPin = document.getElementById('input-cash-out-pin').value;
-    if(cashOutPin === '1234'){
-        const cashOutNumber = parseFloat(cashOutMoney);
-        const oldBalance = document.getElementById('out-account-balance').innerText
-        const oldBalanceNumber = parseFloat(oldBalance);
-        const minusBalance = oldBalanceNumber - cashOutNumber;
-        // console.log(minusBalance);
-        document.getElementById('out-account-balance').innerText = minusBalance;
-    }
-    else{
-        alert('something is wrong')
-    }
+    console.log('add money btn clicked');
+    // getInputFieldValueById();
+    // const addMoney = getInputFieldValueById();
+    // console.log('money')
+
+    const addMoney = getInputFieldValueById('input-add-money');
+    const pinNumber = getInputFieldValueById('input-pin-number')
+    console.log('peramet',  addMoney, pinNumber)
 })
